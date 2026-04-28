@@ -275,7 +275,7 @@ resource "azurerm_storage_account" "test" {
 }
 
 resource "azurerm_storage_table" "test" {
-  name                 = "acctestst%d"
+  name               = "acctestst%d"
   storage_account_id = azurerm_storage_account.test.id
 }
 `, data.RandomInteger, data.Locations.Primary, data.RandomString, data.RandomInteger)
@@ -299,7 +299,7 @@ func (r StorageTableResource) requiresImport(data acceptance.TestData) string {
 %s
 
 resource "azurerm_storage_table" "import" {
-  name                 = azurerm_storage_table.test.name
+  name               = azurerm_storage_table.test.name
   storage_account_id = azurerm_storage_account.test.id
 }
 `, template)
@@ -368,7 +368,7 @@ resource "azurerm_storage_account" "test" {
 }
 
 resource "azurerm_storage_table" "test" {
-  name                 = "acctestst%d"
+  name               = "acctestst%d"
   storage_account_id = azurerm_storage_account.test.id
   acl {
     id = "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI"
@@ -456,7 +456,7 @@ resource "azurerm_storage_account" "test" {
 }
 
 resource "azurerm_storage_table" "test" {
-  name                 = "acctestst%d"
+  name               = "acctestst%d"
   storage_account_id = azurerm_storage_account.test.id
 
   acl {
