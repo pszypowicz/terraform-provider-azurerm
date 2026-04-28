@@ -33,10 +33,10 @@ resource "azurerm_storage_container" "example" {
 }
 
 resource "azurerm_storage_blob" "example" {
-  name                   = "my-awesome-content.zip"
-  storage_container_id   = azurerm_storage_container.example.id
-  type                   = "Block"
-  source                 = "some-local-file.zip"
+  name                 = "my-awesome-content.zip"
+  storage_container_id = azurerm_storage_container.example.id
+  type                 = "Block"
+  source               = "some-local-file.zip"
 }
 ```
 

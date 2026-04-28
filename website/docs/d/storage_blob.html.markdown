@@ -14,8 +14,8 @@ Use this data source to access information about an existing Storage Blob.
 
 ```hcl
 data "azurerm_storage_blob" "example" {
-  name                   = "example-blob-name"
-  storage_container_id   = "example-storage-container-id"
+  name                 = "example-blob-name"
+  storage_container_id = "example-storage-container-id"
 }
 ```
 
